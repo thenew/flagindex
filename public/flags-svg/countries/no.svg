@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 800" title="Flag of Norway">
+    <path d="M1100 0H0v800h1100V0z" fill="#ef2b2d"/>
+    <g class="srp-cross">
+        <path d="M500 0H300v800h200V0z" fill="#fff"/>
+        <path d="M1100 300H0v200h1100V300z" fill="#fff"/>
+        <path d="M450 0H350v800h100V0z" fill="#002868"/>
+        <path d="M1100 350H0v100h1100V350z" fill="#002868"/>
+    </g>
+</svg>

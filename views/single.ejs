@@ -1,0 +1,229 @@
+<%- include('partials/header', {
+  title: data.title + ' Flag', 
+  description: 'The flag of ' + data.title + ' in SVG', 
+  image: data.src, 
+  favicon: data.src
+}) %>
+<% if (data.title) { %>
+  <div class="page-title-box">
+    <h1 class="page-title"><%= data.title %></h1>
+  </div>
+<% } %>
+<main id="maincontent" class="single-layout">
+  <%- include('partials/gridItem.ejs', {flag: data}); %>
+  <div class="single-sidebar">
+
+    <div class="srp-box srp-box-no-header">
+      <div class="srp-box-content">
+        <ul class="links-list">
+          <li class="links-item"><button type="button" class="link" onClick="copy()">> Copy SVG</button></li>
+          <li class="links-item"><a class="link" href="<%= data.src %>">> Download SVG</a></li>
+          <!-- <li class="links-item"><a class="link" href="">> View on GitHub</a></li>
+          <li class="links-item"><a class="link" href="">> Open in Figma</a></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <div class="srp-box srp-box-no-header code">
+      <pre class="srp-box-content pre"><code id="svg-code"><%= include(data.src) %></code></pre>
+    </div>
+
+    <div class="srp-box">
+      <header class="srp-box-header"><div class="text">Specs</div></header>
+      <div class="srp-box-content srp-box-content-specs">
+        <ul>
+          <% if(data.ratios && data.ratios.length) { %>
+            <li class="spec-item"><span class="spec-title">Ratio</span><span class="spec-value"><%- data.ratios.join(',') %></span></li>
+          <% } %>
+          <li class="spec-item"><span class="spec-title">Colors</span><span class="spec-value spec-value-colors">
+            <ul class="colors-list">
+              <% data.colors.forEach(color => { %>
+                <li class="colors-item">
+                  <div class="color" style="border-color: <%= color %>;">
+                    <a href="/?colors=<%= color %>" class="color-swatch" style="background-color: <%= color %>;"></a>
+                    <div class="color-label"><%= color %></div>
+                  </div>
+                </li>
+              <% }) %>
+            </ul>
+          </span></li>
+          <% if(data.sources && data.sources.length) { %>
+            <li class="spec-item"><span class="spec-title">Sources</span><span class="spec-value">
+              <ul>
+                <% data.sources.forEach((source, index) => { %>
+                  <li>
+                    <a class="link" href="<%= source %>" target="_blank" rel="noopener noreferrer"><%= source %></a>
+                  </li>
+                <% }) %>
+              </ul>
+            </span></li>
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+    <% if(data.variants && data.variants.length) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Variants</div></header>
+        <div class="srp-box-content srp-box-content-variants">
+          <ul class="variants-list">
+            <% data.variants.forEach(function(item) { %>
+              <% if (item.src) { %>
+                <%- include('partials/gridItem.ejs', {url: item.slug, flag: item}) %>
+              <% } %>
+            <% }) %>
+          </ul>
+        </div>
+      </div>
+    <% } %>
+
+    <% if(data.meaning) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Meaning</div></header>
+        <div class="srp-box-content srp-box-content-copy">
+          <p><%= data.meaning %></p>
+        </div>
+      </div>
+    <% } %>
+    <% if(data.note) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Note</div></header>
+        <div class="srp-box-content srp-box-content-copy">
+          <p><%= data.note %></p>
+        </div>
+      </div>
+    <% } %>
+    <% if(data.trivia) { %>
+      <div class="srp-box">
+        <header class="srp-box-header"><div class="text">Trivia</div></header>
+        <div class="srp-box-content srp-box-content-copy">
+          <p><%= data.trivia %></p>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</main>
+<script>
+  // get colorAccents
+  const colorAccents = <%- JSON.stringify(data.colorAccents) %>
+  if(colorAccents && colorAccents.length) {
+    document.documentElement.style.setProperty('--color1', colorAccents[0]);
+    colorAccents.forEach((color, i) => {
+      if(!i) return
+      setTimeout(() => {
+        console.log('color: ', color)
+        document.documentElement.style.setProperty('--color1', color);
+      }, 4000 * i)
+    })
+  }
+
+  // animate SVG
+  const svgContainer = document.querySelector('.flag-svg')
+  if(svgContainer) {
+
+    const emblems = svgContainer.querySelectorAll('.srp-emblem')
+    let circles = svgContainer.querySelectorAll('circle')
+    let paths = svgContainer.querySelectorAll('path')
+    
+    paths = Array.from(paths).filter(path => !path.closest('.srp-emblem'))
+    
+    paths.forEach(path => {
+      const rect = path.getBoundingClientRect()
+      const isLandscape = rect.width > rect.height
+      const scale = isLandscape ? 'scaleX(0)' : 'scaleY(0)' 
+      path.style.opacity = 0
+      path.style.transform = scale
+    })
+
+    circles.forEach(item => {
+      item.style.opacity = 0
+      item.style.transform = 'scale(0)'
+    })
+
+    emblems.forEach(item => {
+      item.style.opacity = 0
+    })
+
+    setTimeout(() => {
+      svgContainer.classList.add('js-animate')
+    }, 10);
+    
+    let index = 0
+    let eachDelay = 150
+    
+    paths.forEach((path, i) => {
+      index = i + 1
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        path.style.opacity = 1
+        path.style.transform = 'scale(1)'
+
+      }, eachDelay * index);
+    })
+    
+    circles.forEach(item => {
+      index++
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        item.style.opacity = 1
+        item.style.transform = 'scale(1)'
+
+
+      }, eachDelay * index);
+    })
+
+    emblems.forEach(item => {
+      index++
+      eachDelay -= eachDelay * .04
+      setTimeout(() => {
+        item.style.opacity = 1
+      }, eachDelay * index);
+    })
+  }
+
+  setTimeout(() => {
+    document.documentElement.classList.add('js-ready')
+  }, 10);
+
+  const app = document.getElementById('app')
+
+
+  // display snackbar
+  app.addEventListener('srp-snackbar', function (event) { 
+    const element = document.getElementById('snackbar')
+    element.innerHTML = event.detail.label
+
+    // clear
+    element.classList = ''
+    element.classList.add('show')
+    element.classList.add(event.detail.type)
+
+    setTimeout(function(){ 
+      element.classList.remove('show')
+    }, 3000)
+  }, false);
+
+  // copy to clipboard
+  function copy() {
+    const configId = document.querySelector('#svg-code');
+    const range = document.createRange();
+    console.log('range: ', range)
+    range.selectNode(configId);
+    const selection = window.getSelection()
+    selection.removeAllRanges();
+    selection.addRange(range);
+
+    try {
+      var execCopy = document.execCommand('copy')
+      const label = (execCopy) ? 'Copied to clipboard' : 'Copy to clipboard didn’t work, sorry'
+      const type = (execCopy) ? 'success' : 'error'
+      const event = new CustomEvent('srp-snackbar', { detail: {label: label, type: type} })
+      app.dispatchEvent(event);
+    } catch (err) {
+    }
+
+    selection.removeAllRanges();
+  }
+
+</script>
+<%- include('partials/footer') %>

@@ -1,0 +1,132 @@
+<%- include('partials/header', {title: ''}) %>
+<% if( ! data.hasFilters ) { %>
+  <%- include('partials/marquee') %>
+<% } %>
+<div>
+  <%- include('partials/filters.ejs', {data}); %>
+  <% if(data.filtersValues.collectionTitle) { %>
+    <div class="page-title-box <% if(data.flagsWire && data.flagsWire.length){ %> page-title-box-with-flags<% } %>">
+      <div class="page-title-flag">
+        <div class="flags-all">
+          <% data.flagsWire.forEach(function(flag){ %>
+            <div class="flag">
+              <%- flag %>
+            </div>
+          <% }) %>
+        </div>
+      </div>
+      <div class="page-title-flag-text">
+        <h1 class="page-title"><%= data.filtersValues.collectionTitle %></h1>
+        <% if(data.filtersValues.collectionLink) { %>
+          <a class="link link-bg" href="<%= data.filtersValues.collectionLink %>" target="_blank" rel="noopener noreferrer" title="Download the SVG on <%= data.filtersValues.collectionLink %>">Download the SVG folder</a>
+        <% } %>
+      </div>
+    </div>
+  <% } else if(Object.keys(data.flags).length < 1) { %>
+    <div class="page-title-box">
+      <h1 class="page-title">No results</h1>
+    </div>
+  <% } %>
+  <main id="maincontent">
+    <% if(Object.keys(data.flags).length > 0) { %>
+      <div class="grid <% if(Object.keys(data.flags).length > 4) { %>grow<% } %>">
+        <% Object.keys(data.flags).forEach(function(key){ %>
+          <% if (data.flags[key].src) { %>
+            <% if (data.params.get('view') === `list`) { %>
+              <%- include('partials/lineItem.ejs', {url: key, flag: data.flags[key]}) %>
+            <% } else { %>
+              <%- include('partials/gridItem.ejs', {url: key, flag: data.flags[key]}) %>
+            <% } %>
+          <% } %>
+        <% }) %>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+        <div class="grid-item hidden"></div>
+      </div>
+    <% } else { %>
+      <div class="no-content">( ノ ゜□ ゜)ノ ︵ ┻━━┻</div>
+    <% } %>
+  </main>
+</div>
+
+<script>
+  function clamp(num, min, max) {
+    return num <= min ? min : num >= max ? max : num;
+  }
+
+  const isMobile = !!window.matchMedia('(max-width: 768px)').matches
+
+  const grid = document.querySelector('.grid');
+  const gridItems = document.querySelectorAll('.grid-item');
+  const form = document.querySelector('.filters-form');
+  const formSubmit = document.querySelector('.filters-form-submit');
+  const formCheckboxes = document.querySelectorAll('.filters input[type="checkbox"], .filters input[type="radio"]');
+  const viewLayoutInput = document.querySelector('.filters-grid-size');
+  const gridSizeInput = document.querySelector('.filters-grid-size');
+  const searchInput = document.querySelector('.search-input');
+
+  // init
+  if(gridSizeInput) {
+    gridSize(gridSizeInput.value);
+    
+    gridSizeInput.oninput = function(event) { 
+      gridSize(this.value);
+    }
+  }
+
+
+  form.addEventListener('submit', function(event) {
+    // event.preventDefault();
+// construct a FormData object, which fires the formdata event
+    // const formData = new FormData(form);
+    // const searchParams = new URLSearchParams(formData);
+    // updateUrl(searchParams)
+    // const queryString = searchParams.toString();
+    // console.log('queryString: ', queryString)
+  })
+
+  // searchInput.addEventListener('keydown', function(event) {
+
+  // })
+
+  formCheckboxes.forEach(function(input) {
+    input.addEventListener('change', function(event) { 
+      if(typeof form.requestSubmit !== 'undefined') {
+        form.requestSubmit()
+      } else {
+        formSubmit.click()
+      }
+    })
+  })
+
+  function gridSize(value) {
+    if(isMobile) {
+      value = value * 2
+    }
+
+    var index = 0, length = gridItems.length;
+    for ( ; index < length; index++) {
+      gridItems[index].style.flexBasis = value+'%'
+      gridItems[index].style.fontSize = clamp(value/10, .2, 2)+'vw'
+    }
+  }
+
+  function updateUrl(searchParams) {
+    // const params = new URLSearchParams(location.search);
+    // params.appendAll(searchParams);
+    window.history.replaceState({}, '', `${location.pathname}?${searchParams}`);
+
+    // const items = {}
+    // console.log('items: ', items)
+    // console.log('ejs: ', ejs)
+    // const people = ['geddy', 'neil', 'alex']
+    // const html = ejs.render('%= people.join(", "); %>', {people: people})
+  
+    // console.log('html: ', html)
+    // grid.innerHTML = `test`
+  }
+</script>
+<%- include('partials/footer') %>

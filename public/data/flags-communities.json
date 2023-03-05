@@ -1,0 +1,47 @@
+{
+  "rainbow": {
+    "title": "Rainbow",
+    "src": "../public/flags-svg/communities/rainbow.svg",
+    "ratios": ["2:3"],
+    "colors": ["#e40303","#ff8c00","#ffed00","#008026","#004dff","#750787"],
+    "shapes": ["stripes"],
+    "otherTitles": ["Gay pride", "LGBT pride", "Pride"]
+  },
+  "transgender": {
+    "title": "Transgender",
+    "src": "../public/flags-svg/communities/transgender.svg",
+    "ratios": ["2:3"],
+    "colors": ["#5bcefa", "#f5a9b8", "#fff"],
+    "shapes": ["stripes"],
+    "otherTitles": []
+  },
+  "nonbinary": {
+    "title": "Non binary",
+    "src": "../public/flags-svg/communities/nonbinary.svg",
+    "ratios": ["2:3"],
+    "colors": ["#fff433", "#9b59d0", "#2d2d2d", "#fff"],
+    "shapes": ["stripes"],
+    "otherTitles": [""]
+  },
+  "intersex": {
+    "title": "Intersex",
+    "src": "../public/flags-svg/communities/intersex.svg",
+    "ratios": ["2:3"],
+    "colors": ["#ffd800", "#7902aa"],
+    "shapes": ["stripes"],
+    "otherTitles": [""],
+    "description": "The flag was designed by Morgan Carpenter.",
+    "sources": ["https://ihra.org.au/22773/an-intersex-flag/"]
+  },
+  "nato": {
+    "title": "NATO",
+    "src": "../public/flags-svg/communities/nato.svg",
+    "ratios": [""],
+    "colors": [""],
+    "sources": [
+      "https://www.nato.int/vigs/pdf/NATO-VIGs-2016-en.pdf",
+      "https://www.nato.int/cps/en/natohq/declassified_136211.htm",
+      "https://www.nato.int/nato_static_fl2014/assets/pictures/history_dyn_a-star-is-born/20161103_e1-symbols_a-star-is-born_nato-flag.jpg"
+    ]
+  }
+}

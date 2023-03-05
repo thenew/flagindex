@@ -1,0 +1,134 @@
+<div class="filters">
+    <form action="/" method="get" class="filters-form">
+        <%# fieldset can't be flexbox containers on Chrome %>
+        <div class="fieldset fieldset-categories">
+            <div class="fieldset-label">Categories</div>
+            <ul class="checkbox-boxes">
+                <% const categories = data.params.getAll('categories') %>
+                <% data.filtersValues.categories.forEach(category => { %>
+                    <li class="checkbox-box">
+                        <%- include('checkbox.ejs', {
+                            name: 'categories', id: category, label: category, labelVisible: category, checked: categories.includes(category)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <% if(Object.keys(data.filtersValues.continents).length) { %>
+            <div class="fieldset">
+                <div class="fieldset-label">Continents</div>
+                <ul class="checkbox-boxes">
+                    <% const continents = data.params.getAll('continents') %>
+                    <% Object.keys(data.filtersValues.continents).forEach(continentCode => {
+                        const label = data.filtersValues.continents[continentCode];
+                        %>
+                        <li class="checkbox-box">
+                            <%- include('checkbox.ejs', {
+                                name: 'continents', id: continentCode, label: label, labelVisible: label, checked: continents.includes(continentCode)
+                            }) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+        <% if(data.filtersValues.groups) { %>
+            <div class="fieldset">
+                <div class="fieldset-label">Groups</div>
+                <ul class="checkbox-boxes">
+                    <% const groups = data.params.getAll('groups') %>
+                    <% data.filtersValues.groups.forEach(group => { %>
+                        <li class="checkbox-box">
+                            <%- include('checkbox.ejs', {
+                                name: 'groups', id: group, label: group, labelVisible: group, checked: groups.includes(group)
+                            }) %>
+                        </li>
+                    <% }) %>
+                </ul>
+            </div>
+        <% } %>
+        <div class="fieldset">
+            <div class="fieldset-label">Colors</div>
+            <ul class="checkbox-boxes colors">
+                <% Object.keys(data.filtersValues.colors).forEach(colorName => { %>
+                    <% const {label = '', mainColorCode = '', dark = false} = data.filtersValues.colors[colorName] %>
+                        <li class="checkbox-box <% if(dark){ %>dark<% } %>" style="background-color: <%= mainColorCode %>;">
+                        <%- include('checkbox.ejs', {
+                            name: 'colors', id: colorName, label: label, checked: data.params.getAll('colors').includes(colorName)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="fieldset">
+            <div class="fieldset-label">Number of colors</div>
+            <ul class="checkbox-boxes">
+                <% const numberColors = data.params.getAll('number-colors') %>
+                <% data.filtersValues.numberColors.forEach(number => { %>
+                    <li class="checkbox-box">
+                        <%- include('checkbox.ejs', {
+                            name: 'number-colors', id: number, label: number, checked: numberColors.includes(number)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <div class="fieldset">
+            <div class="fieldset-label">Ratios</div>
+            <ul class="checkbox-boxes">
+                <% const ratios = data.params.getAll('ratios') %>
+                <% data.filtersValues.ratios.forEach(ratio => { %>
+                    <li class="checkbox-box">
+                        <%- include('checkbox.ejs', {
+                            name: 'ratios', id: ratio, label: ratio, labelVisible: ratio, checked: ratios.includes(ratio)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div>
+        <!-- <div class="fieldset">
+            <div class="fieldset-label">Collections</div>
+            <ul class="checkbox-boxes">
+                <% const collections = data.params.getAll('collections') %>
+                <% data.filtersValues.collections.forEach(collection => { %>
+                    <li class="checkbox-box">
+                        <%- include('checkbox.ejs', {
+                            name: 'collections', id: collection, label: collection, labelVisible: collection, checked: collections.includes(collection)
+                        }) %>
+                    </li>
+                <% }) %>
+            </ul>
+        </div> -->
+        <div class="fieldset fieldset-search">
+            <input class="search-input" type="text" title="Search a name" id="search" name="search" placeholder="Search" value="<%= data.params.get('search') %>">
+            <button type="submit" class="search-submit">
+                <div class="sr-only">Search</div>
+                <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 13" fill="none" title="Search icon">
+                    <circle cx="4.5" cy="4.5" r="4"/>
+                    <line x1="7.35355" y1="7.64645" x2="12.3536" y2="12.6464"/>
+                </svg>
+            </button>
+        </div>
+        <div class="fieldset fieldset-view">
+            <div class="fieldset-label">View</div>
+
+            <% const viewLayout = data.params.get('view') || `grid` %>
+            <ul class="checkbox-boxes">
+                <li class="checkbox-box">
+                    <%- include('checkbox.ejs', {
+                        type: `radio`, name: 'view', id: `list`, label: `list`, labelVisible: `list`, checked: viewLayout === `list`
+                    }) %>
+                </li>
+                <li class="checkbox-box">
+                    <%- include('checkbox.ejs', {
+                        type: `radio`, name: 'view', id: `grid`, label: `grid`, labelVisible: `grid`, checked: viewLayout === `grid`
+                    }) %>
+                </li>
+            </ul>
+            <% if(viewLayout === `grid`) { %>
+                <% const gridSize = data.params.get('grid-size') || 25 %>
+                <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= gridSize %>" title="Change the size of the grid">
+            <% } %>
+        </div>
+        <button type="submit" class="filters-form-submit hidden"></button>
+    </form>
+</div>

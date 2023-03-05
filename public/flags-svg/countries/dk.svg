@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14" title="Flag of Denmark">
+    <path d="M0,0H18V14H0Z" fill="#c8102e" />
+    <g class="srp-cross">
+        <path d="M6,0h2V14.1h-2V0Z" fill="#fff"/>
+        <path d="M0,6H18v2H0Z" fill="#fff"/>
+    </g>
+</svg>

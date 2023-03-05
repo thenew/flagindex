@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" title="Flag of Switzerland">
+    <path d="M0,0h32v32h-32Z" fill="#f00"/>
+    <g class="srp-cross">
+        <path d="M6,13h20v6h-20Z" fill="#fff"/>
+        <path d="M13,6h6v20h-6Z" fill="#fff"/>
+    </g>
+</svg>

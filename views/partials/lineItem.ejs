@@ -1,0 +1,14 @@
+<div class="grid-element list-item">
+    <% if(typeof url !== 'undefined') { %>
+        <a class="item" href="/<%= url %>">
+    <% } else { %>
+        <div class="item">
+    <% } %>
+        <div class="item-image flag-svg"><%- include('../'+flag.src) %></div>
+        <div class="item-title"><%- flag.title %></div>
+    <% if(typeof url !== 'undefined') { %>
+        </a>
+    <% } else { %>
+        </div>
+    <% } %>
+</div>

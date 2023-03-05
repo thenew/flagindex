@@ -1,0 +1,11 @@
+<% const labelV = typeof labelVisible !== 'undefined' ? labelVisible : label.charAt(0) %>
+<% const tagType = typeof type !== 'undefined' ? type : `checkbox` %>
+<% if(tagType === `radio`) { %>
+    <input type="radio" class="checkbox" name="<%= name %>" id="<%= id %>" value="<%= id %>" <% if(checked) { %>checked<% } %>>
+<% } else { %>
+    <input type="checkbox" class="checkbox" name="<%= name %>" id="<%= id %>" value="<%= id %>" <% if(checked) { %>checked<% } %>>
+<% } %>
+<label for="<%= id %>" class="label" title="<%= label %>">
+    <span class="sr-only"><%= label %></span>
+    <div class="label-visible"><%= labelV %></div>
+</label>
