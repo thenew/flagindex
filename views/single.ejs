@@ -121,11 +121,11 @@
   const svgContainer = document.querySelector('.flag-svg')
   if(svgContainer) {
 
-    const emblems = svgContainer.querySelectorAll('.srp-emblem')
+    const emblems = svgContainer.querySelectorAll('.flagindex-emblem')
     let circles = svgContainer.querySelectorAll('circle')
     let paths = svgContainer.querySelectorAll('path')
     
-    paths = Array.from(paths).filter(path => !path.closest('.srp-emblem'))
+    paths = Array.from(paths).filter(path => !path.closest('.flagindex-emblem'))
     
     paths.forEach(path => {
       const rect = path.getBoundingClientRect()
