@@ -321,14 +321,15 @@
     "src": "../public/flags-svg/countries/si.svg",
     "countryCode": "si",
     "ratios": ["1:2"],
-    "colors": ["#254aa5", "#ed1c24", "#fff"],
+    "colors": ["#fff", "#00F", "#f00"],
     "shapes": ["stripes", "horizontal", "shield"],
     "groups": ["Pan-Slavic"],
     "continent": "eu",
     "sources": [
-      "https://www.gov.si/teme/drzavni-simboli/"
+      "https://www.gov.si/teme/drzavni-simboli/",
+      "https://www.gov.si/assets/vladne-sluzbe/PROTOKOL/Dokumenti/Zastava-Republike-Slovenije.pdf"
     ],
-    "note": "Based on the official SVG file."
+    "note": "Based on the official PDF file."
   },
   "hr": {
     "title": "Croatia",

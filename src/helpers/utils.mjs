@@ -62,6 +62,7 @@ export const colorsObjects = {
       "#b0313f",
       "#AA151B",
       "#D50032",
+      "#ed1c24",
     ],
   },
   orange: {
@@ -111,6 +112,7 @@ export const colorsObjects = {
       "#0093dd",
       "#171796",
       "#10069F",
+      "#254aa5",
     ],
   },
   violet: {
