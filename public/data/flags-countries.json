@@ -446,6 +446,20 @@
     "tags": ["no-official-color"],
     "variantOf": "ca"
   },
+  "uk": {
+    "title": "Ukraine",
+    "src": "../public/flags-svg/countries/uk.svg",
+    "countryCode": "uk",
+    "ratios": ["2:3"],
+    "colors": ["#005bbb", "#ffd500"],
+    "shapes": ["stripes", "horizontal"],
+    "groups": [],
+    "continent": "eu",
+    "sources": [
+      "https://uk.wikisource.org/wiki/%D0%94%D0%A1%D0%A2%D0%A3_4512:2006"
+    ],
+    "note": "Created from the official guidelines."
+  },
   "ae": {
     "title": "United Arab Emirates"
   },
