@@ -77,6 +77,7 @@ export const colorsObjects = {
     dark: false,
     colorsCodes: [
       "#ff0",
+      "#fc0",
       "#ffff00",
       "#ffed00",
       "#fcdd09",

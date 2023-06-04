@@ -187,9 +187,7 @@
     "colors": ["#FDB913", "#006A44", "#C1272D"],
     "shapes": ["stripes", "horizontal"],
     "continent": "eu",
-    "sources": [
-      "https://fotw.info/flags/lt_leg.html"
-    ]
+    "sources": ["https://fotw.info/flags/lt_leg.html"]
   },
   "lv": {
     "title": "Latvia",
@@ -199,9 +197,7 @@
     "colors": ["#9D2235", "#fff"],
     "shapes": ["stripes", "horizontal"],
     "continent": "eu",
-    "sources": [
-      "https://www.president.lv/en/republic-of-latvia/state-flag"
-    ]
+    "sources": ["https://www.president.lv/en/republic-of-latvia/state-flag"]
   },
   "ee": {
     "title": "Estonia",
@@ -211,9 +207,7 @@
     "colors": ["#0072CE", "#000", "#fff"],
     "shapes": ["stripes", "horizontal"],
     "continent": "eu",
-    "sources": [
-      "https://www.riigiteataja.ee/en/eli/525062018002/consolide"
-    ]
+    "sources": ["https://www.riigiteataja.ee/en/eli/525062018002/consolide"]
   },
   "dk": {
     "title": "Danemark",
@@ -227,6 +221,20 @@
     "sources": [""],
     "trivia": "It is the oldest continuously used national flag.",
     "note": "Created from the official guidelines."
+  },
+  "de": {
+    "title": "Germany",
+    "src": "../public/flags-svg/countries/de.svg",
+    "countryCode": "de",
+    "ratios": ["3:5"],
+    "colors": ["#000", "#f00", "#fc0"],
+    "shapes": ["stripes", "horizontal"],
+    "continent": "eu",
+    "sources": [
+      "https://www.protokoll-inland.de/Webs/PI/DE/beflaggung/flaggen-des-bundes/bundesflagge/die-bundesflagge-node.html",
+      "https://styleguide.bundesregierung.de/sg-de/basiselemente/farben#idSideNav-tabPage-2023492"
+    ],
+    "note": "Ratios and colors from official document but RGB colors from the government's design style guide."
   },
   "se": {
     "title": "Sweden",
@@ -276,7 +284,9 @@
     "colors": ["#f00", "#fff"],
     "shapes": ["cross"],
     "continent": "eu",
-    "sources": ["https://www.admin.ch/opc/en/classified-compilation/20091656/index.html#a3"]
+    "sources": [
+      "https://www.admin.ch/opc/en/classified-compilation/20091656/index.html#a3"
+    ]
   },
   "at": {
     "title": "Austria",
@@ -311,9 +321,7 @@
     "shapes": ["stripes", "horizontal"],
     "groups": ["Pan-Slavic"],
     "continent": "eu",
-    "sources": [
-      "https://www.vlada.gov.sk/statna-vlajka/"
-    ],
+    "sources": ["https://www.vlada.gov.sk/statna-vlajka/"],
     "note": "Based on the official SVG file."
   },
   "si": {
@@ -587,9 +595,6 @@
   },
   "cy": {
     "title": "Cyprus"
-  },
-  "de": {
-    "title": "Germany"
   },
   "dj": {
     "title": "Djibouti"
