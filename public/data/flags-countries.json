@@ -199,6 +199,22 @@
     "continent": "eu",
     "sources": ["https://www.president.lv/en/republic-of-latvia/state-flag"]
   },
+  "mc": {
+    "title": "Monaco",
+    "src": "../public/flags-svg/countries/mc.svg",
+    "countryCode": "mc",
+    "ratios": ["2:3"],
+    "colors": ["#b52125", "#fff"],
+    "shapes": ["stripes", "horizontal"],
+    "continent": "eu",
+    "sources": [
+      "https://legimonaco.mc/tnc/ordonnance/1881/04-04-L000701@1881.04.05/"
+    ],
+    "note": [
+      "Created from a stylized SVG flag in a banner “Official website of the Principality of Monaco” which can be seen on https://princealbert1.mc",
+      "I'm searching for annexxes of the “Ordonnance Souveraine du 4 avril 1881 sur le pavillon princier et le pavillon national”"
+    ]
+  },
   "ee": {
     "title": "Estonia",
     "src": "../public/flags-svg/countries/ee.svg",
