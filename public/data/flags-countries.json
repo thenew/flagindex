@@ -369,6 +369,19 @@
       "https://sabor.hr/sites/default/files/uploads/Obilje%C5%BEja%20dr%C5%BEavnosti/zastava_rh_s_konstrukcijom_kodovi_boja.jpg"
     ]
   },
+  "is": {
+    "title": "Iceland",
+    "src": "../public/flags-svg/countries/is.svg",
+    "countryCode": "is",
+    "ratios": ["18:25"],
+    "colors": ["#02529c", "#fff", "#dc1e35"],
+    "shapes": ["cross"],
+    "groups": ["Scandinavian cross"],
+    "continent": "eu",
+    "sources": [
+      "https://www.government.is/topics/governance-and-national-symbols/icelandic-national-flag/"
+    ]
+  },
   "et": {
     "title": "Ethiopia",
     "src": "../public/flags-svg/countries/et.svg",

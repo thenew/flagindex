@@ -64,6 +64,8 @@ export const colorsObjects = {
       "#D50032",
       "#ed1c24",
       "#b52125",
+      "#ce2939",
+      "#dc1e35",
     ],
   },
   orange: {
@@ -97,7 +99,14 @@ export const colorsObjects = {
     label: "Green",
     mainColorCode: "#0f0",
     dark: false,
-    colorsCodes: ["#0f0", "#008026", "#078930", "#00613C", "#008C45"],
+    colorsCodes: [
+      "#0f0",
+      "#008026",
+      "#078930",
+      "#00613C",
+      "#008C45",
+      "#477050",
+    ],
   },
   blue: {
     label: "Blue",
@@ -117,6 +126,7 @@ export const colorsObjects = {
       "#10069F",
       "#254aa5",
       "#005bbb",
+      "#02529c",
     ],
   },
   violet: {

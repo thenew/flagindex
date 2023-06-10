@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 18">
+    <title>Flag of Iceland</title>
+    <rect width="100%" height="100%" fill="#02529c"/>
+    <g class="flagindex-cross">
+        <path d="M0 7H25v4H0z" fill="#fff"/>
+        <path d="M7 0h4V18H7z" fill="#fff"/>
+        <path d="M0 8H25v2H0z" fill="#dc1e35"/>
+        <path d="M8 0h2V18H8z" fill="#dc1e35"/>
+    </g>
+</svg>
