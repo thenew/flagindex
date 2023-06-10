@@ -1,4 +1,18 @@
 {
+  "ax": {
+    "title": "Åland",
+    "src": "../public/flags-svg/countries/ax.svg",
+    "countryCode": "ax",
+    "ratios": ["5:8"],
+    "colors": ["#006aa7", "#fecc00"],
+    "shapes": ["cross"],
+    "groups": ["Scandinavian cross"],
+    "continent": "eu",
+    "sources": [
+      "https://www.regeringen.ax/alandsk-lagstiftning/alex/199241",
+      "https://www.regeringen.ax/sites/default/files/attachments/law/afs2004-nr15.pdf"
+    ]
+  },
   "eu": {
     "title": "Europe",
     "src": "../public/flags-svg/countries/eu.svg",
@@ -380,7 +394,8 @@
     "continent": "eu",
     "sources": [
       "https://www.government.is/topics/governance-and-national-symbols/icelandic-national-flag/"
-    ]
+    ],
+    "tags": ["official-digital-guidelines"]
   },
   "et": {
     "title": "Ethiopia",
@@ -524,9 +539,6 @@
   },
   "aw": {
     "title": "Aruba"
-  },
-  "ax": {
-    "title": "Åland"
   },
   "az": {
     "title": "Azerbaijan"

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 17">
+    <title>Flag of Åland</title>
+    <rect width="100%" height="100%" fill="#0064ad"/>
+    <g class="flagindex-cross">
+        <path d="M0 6H26v5H0z" fill="#ffd300"/>
+        <path d="M8 0h5V17H8z" fill="#ffd300"/>
+        <path d="M0 7.5H26v2H0z" fill="#da0e15"/>
+        <path d="M9.5 0h2V17H9.5z" fill="#da0e15"/>
+    </g>
+</svg>
