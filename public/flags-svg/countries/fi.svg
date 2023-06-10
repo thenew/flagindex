@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11" title="Flag of Finland">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 11">
+    <title>Flag of Finland</title>
     <path d="M0,0H18V11H0Z" fill="#fff"/>
     <g class="flagindex-cross">
         <path d="M5,0h3V11.1h-3V0Z" fill="#003580"/>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 8">
+    <title>Flag of Faroe Islands</title>
+    <rect width="100%" height="100%" fill="#fff"/>
+    <g class="flagindex-cross">
+        <path d="M5 0H3v8h2V0z" fill="#005eb9"/>
+        <path d="M11 3H0v2h11V3z" fill="#005eb9"/>
+        <path d="M4.5 0H3.5v8h1V0z" fill="#ef303e"/>
+        <path d="M11 3.5H0v1h11V3.5z" fill="#ef303e"/>
+    </g>
+</svg>
