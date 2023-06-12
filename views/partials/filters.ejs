@@ -125,7 +125,7 @@
                 </li>
             </ul>
             <% if(viewLayout === `grid`) { %>
-                <% const gridSize = data.params.get('grid-size') || 25 %>
+                <% const gridSize = data.params.get('grid-size') || 10 %>
                 <input class="filters-grid-size input-range" type="range" name="grid-size" min="10" max="50" value="<%= gridSize %>" title="Change the size of the grid">
             <% } %>
         </div>

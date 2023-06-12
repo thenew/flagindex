@@ -3,6 +3,26 @@
 @import "4-layout.css";
 @import "filters.css";
 
+/* Fonts */
+
+@font-face {
+  font-family: "Id";
+  src: url("/public/fonts/Id-Medium.woff2") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Id";
+  src: url("/public/fonts/Id-Light.woff2") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Id";
+  src: url("/public/fonts/Id-Book.woff2") format("woff2");
+  font-weight: 800;
+}
+
 :root {
   /* abstract */
   --blue: #00f;
@@ -20,7 +40,7 @@
   --colorCopy: #111;
   --colorBg: #eee;
 
-  --titleFont: "Idlewild SSm A", "Idlewild SSm B", Idlewild, monospace;
+  --titleFont: "Idlewild SSm A", "Idlewild SSm B", Idlewild, Id, monospace;
   --titleFontLight: 400;
   --titleFontNormal: 600;
   --titleFontBold: 800;
@@ -188,7 +208,7 @@
   /* background-color: var(--color3); */
   /* background-color: var(--grey); */
   background-color: rgba(0, 0, 0, 0.1);
-  transition: color .2s var(--ease), background .2s var(--ease);
+  transition: color 0.2s var(--ease), background 0.2s var(--ease);
 }
 
 .grid-item .item {
@@ -254,7 +274,6 @@
 .list-item .item:hover .item-title {
   transform: translateX(5%);
 }
-
 
 .item-note {
   position: absolute;
@@ -450,7 +469,7 @@
   .single-layout .grid-item {
     flex-basis: 50%;
   }
-  
+
   .single-layout .grid-item .ratio-box {
     padding-top: 70%;
   }
