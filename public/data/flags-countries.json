@@ -53,7 +53,7 @@
     "src": "../public/flags-svg/countries/it.svg",
     "countryCode": "it",
     "ratios": ["2:3"],
-    "colors": ["#008C45", "#F4F5F0", "#CD212A"],
+    "colors": ["#008C45", "#f4f5f0", "#cd212a"],
     "shapes": ["stripes", "vertical"],
     "groups": ["French tricolour revolution"],
     "continent": "eu",
@@ -396,6 +396,17 @@
       "https://sabor.hr/hr/o-saboru/obiljezja-drzavnosti",
       "https://sabor.hr/sites/default/files/uploads/Obilje%C5%BEja%20dr%C5%BEavnosti/zastava_rh_s_konstrukcijom_kodovi_boja.jpg"
     ]
+  },
+  "hu": {
+    "title": "Hungary",
+    "src": "../public/flags-svg/countries/hu.svg",
+    "countryCode": "hu",
+    "ratios": ["1:2"],
+    "colors": ["#ce2939", "#fff", "#477050"],
+    "shapes": ["stripes", "horizontal"],
+    "groups": ["Pan-Slavic"],
+    "continent": "eu",
+    "sources": ["https://njt.hu/jogszabaly/2011-4301-02-00"]
   },
   "is": {
     "title": "Iceland",
