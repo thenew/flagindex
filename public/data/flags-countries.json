@@ -529,6 +529,18 @@
     ],
     "note": "Created from the official guidelines."
   },
+  "ps": {
+    "title": "Palestine",
+    "src": "../public/flags-svg/countries/ps.svg",
+    "countryCode": "ps",
+    "ratios": ["2:3"],
+    "colors": ["#000000", "#ffffff", "#009736", "#ee2a35"],
+    "shapes": ["stripes", "horizontal"],
+    "groups": ["Arab"],
+    "continent": "as",
+    "sources": [],
+    "note": ""
+  },
   "ae": {
     "title": "United Arab Emirates"
   },
