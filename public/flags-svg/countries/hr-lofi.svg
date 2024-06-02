@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+	<title>Flag of Croatia (lo-fi version)</title>
+	<path fill="#f00" d="M0 0h1200v200H0V0Z"/>
+	<path fill="#fff" d="M0 200h1200v200H0V0Z"/>
+	<path fill="#171796" d="M0 400h1200v200H0V0Z"/>
+	<g class="flagindex-emblem">
+		<g>
+			<path fill="#0093DD" d="M527.885 144h-48v48h48v-48Z"/>
+			<path fill="#171796" d="M575.885 144h-48v48h48v-48Z"/>
+			<path fill="#0093DD" d="M623.885 144h-48v48h48v-48Z"/>
+			<path fill="#171796" d="M671.885 144h-48v48h48v-48Z"/>
+			<path fill="#0093DD" d="M719.885 144h-48v48h48v-48Z"/>
+		</g>
+		<g>
+			<path fill="#f00" d="M527.885 208h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M575.885 208h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M575.885 304h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M575.885 400h-48v24h48v-24Z"/>
+			<path fill="#fff" d="M527.885 256h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M527.885 352h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M671.885 208h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M671.885 304h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M671.885 400h-48v24h48v-24Z"/>
+			<path fill="#fff" d="M623.885 256h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M623.885 352h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M719.885 256h-48v48h48v-48Z"/>
+			<path fill="#fff" d="M719.885 352h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M527.885 304h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M527.885 400h-48v24h48v-24Z"/>
+			<path fill="#f00" d="M575.885 256h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M575.885 352h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M623.885 208h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M623.885 304h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M623.885 400h-48v24h48v-24Z"/>
+			<path fill="#f00" d="M671.885 256h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M671.885 352h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M719.885 208h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M719.885 304h-48v48h48v-48Z"/>
+			<path fill="#f00" d="M719.885 400h-48v24h48v-24Z"/>
+		</g>
+	</g>
+</svg>

@@ -46,7 +46,41 @@
     "sources": [
       "http://jorgesampaio.arquivo.presidencia.pt/pt/republica/simbolos/bandeiras/"
     ],
-    "note": "Based on the official eps file. Fixed little visuals glitches in the sphere. Fixed the dimensions."
+    "note": "Based on the official eps file. Fixed little visuals glitches in the sphere. Fixed the dimensions.",
+    "variants": ["pt-simplified", "pt-lofi"]
+  },
+  "pt-simplified": {
+    "title": "Portugal Simplified",
+    "src": "../public/flags-svg/countries/pt-simplified.svg",
+    "countryCode": "pt",
+    "ratios": ["2:3"],
+    "colors": ["#ED192D", "#00613C", "#FBDF21"],
+    "shapes": ["stripes", "horizontal", "shield"],
+    "continent": "eu",
+    "variantOf": "pt"
+  },
+  "pt-lofi": {
+    "title": "Portugal Lo-Fi",
+    "src": "../public/flags-svg/countries/pt-lofi.svg",
+    "countryCode": "pt",
+    "ratios": ["2:3"],
+    "colors": ["#ED192D", "#00613C", "#FBDF21"],
+    "shapes": ["stripes", "horizontal", "shield"],
+    "continent": "eu",
+    "variantOf": "pt"
+  },
+  "rs": {
+    "title": "Serbia",
+    "src": "../public/flags-svg/countries/rs.svg",
+    "countryCode": "rs",
+    "ratios": ["2:3"],
+    "colors": ["#C6363C", "#0C4076", "#ffffff"],
+    "shapes": ["stripes", "horizontal", "shield"],
+    "continent": "eu",
+    "sources": [
+      "https://www.srbija.gov.rs/tekst/en/130128/national-symbols.php"
+    ],
+    "note": ""
   },
   "it": {
     "title": "Italy",
@@ -113,7 +147,7 @@
     "variants": ["gr-flagindex"]
   },
   "gr-flagindex": {
-    "title": "Greece Sarapis",
+    "title": "Greece Flagindex",
     "src": "../public/flags-svg/countries/gr-flagindex.svg",
     "countryCode": "gr",
     "ratios": ["3:5"],
@@ -395,7 +429,30 @@
     "sources": [
       "https://sabor.hr/hr/o-saboru/obiljezja-drzavnosti",
       "https://sabor.hr/sites/default/files/uploads/Obilje%C5%BEja%20dr%C5%BEavnosti/zastava_rh_s_konstrukcijom_kodovi_boja.jpg"
-    ]
+    ],
+    "variants": ["hr-simplified", "hr-lofi"]
+  },
+  "hr-simplified": {
+    "title": "Croatia Simplified",
+    "src": "../public/flags-svg/countries/hr-simplified.svg",
+    "countryCode": "hr",
+    "ratios": ["1:2"],
+    "colors": ["#f00", "#fff", "#0093dd", "#171796"],
+    "shapes": ["stripes", "horizontal", "shield"],
+    "groups": ["Pan-Slavic"],
+    "continent": "eu",
+    "variantOf": "hr"
+  },
+  "hr-lofi": {
+    "title": "Croatia Lo-Fi",
+    "src": "../public/flags-svg/countries/hr-lofi.svg",
+    "countryCode": "hr",
+    "ratios": ["1:2"],
+    "colors": ["#f00", "#fff", "#0093dd", "#171796"],
+    "shapes": ["stripes", "horizontal", "shield"],
+    "groups": ["Pan-Slavic"],
+    "continent": "eu",
+    "variantOf": "hr"
   },
   "hu": {
     "title": "Hungary",
@@ -454,17 +511,6 @@
     "trivia": "The colors shall be bright and basic.",
     "variantOf": "et"
   },
-  "jp": {
-    "title": "Japan",
-    "src": "../public/flags-svg/countries/jp.svg",
-    "countryCode": "jp",
-    "shapes": ["circle"],
-    "colors": ["#b0313f", "#fff"],
-    "ratios": ["7:10"],
-    "continent": "as",
-    "sources": [""],
-    "trivia": ""
-  },
   "ca": {
     "title": "Canada",
     "src": "../public/flags-svg/countries/ca.svg",
@@ -482,7 +528,7 @@
     "variants": ["ca-normal", "ca-flagindex"]
   },
   "ca-flagindex": {
-    "title": "Canada Sarapis",
+    "title": "Canada Flagindex",
     "src": "../public/flags-svg/countries/ca-flagindex.svg",
     "countryCode": "ca",
     "shapes": ["stripes", "vertical"],
@@ -528,6 +574,17 @@
       "https://uk.wikisource.org/wiki/%D0%94%D0%A1%D0%A2%D0%A3_4512:2006"
     ],
     "note": "Created from the official guidelines."
+  },
+  "jp": {
+    "title": "Japan",
+    "src": "../public/flags-svg/countries/jp.svg",
+    "countryCode": "jp",
+    "shapes": ["circle"],
+    "colors": ["#b0313f", "#fff"],
+    "ratios": ["7:10"],
+    "continent": "as",
+    "sources": [""],
+    "trivia": ""
   },
   "ps": {
     "title": "Palestine",
