@@ -3,7 +3,14 @@
     "title": "Rainbow",
     "src": "../public/flags-svg/communities/rainbow.svg",
     "ratios": ["2:3"],
-    "colors": ["#e40303","#ff8c00","#ffed00","#008026","#004dff","#750787"],
+    "colors": [
+      "#e40303",
+      "#ff8c00",
+      "#ffed00",
+      "#008026",
+      "#004dff",
+      "#750787"
+    ],
     "shapes": ["stripes"],
     "otherTitles": ["Gay pride", "LGBT pride", "Pride"]
   },
@@ -36,12 +43,20 @@
   "nato": {
     "title": "NATO",
     "src": "../public/flags-svg/communities/nato.svg",
-    "ratios": [""],
-    "colors": [""],
+    "ratios": ["3:4"],
+    "colors": ["#004990", "#fff"],
     "sources": [
-      "https://www.nato.int/vigs/pdf/NATO-VIGs-2016-en.pdf",
-      "https://www.nato.int/cps/en/natohq/declassified_136211.htm",
-      "https://www.nato.int/nato_static_fl2014/assets/pictures/history_dyn_a-star-is-born/20161103_e1-symbols_a-star-is-born_nato-flag.jpg"
-    ]
+      "https://www.jwc.nato.int/application/files/8415/6570/9049/NATO-VIGs-2016-en.pdf",
+      "https://www.nato.int/cps/en/natohq/declassified_136211.htm"
+    ],
+    "note": "The approximate hex color for the Pantone 280 C, used in our variant, looks more convicing as dark blue than the official HTML color from the Visual Identity Guidelines in sources: #004990.",
+    "variants": ["nato-flagindex"]
+  },
+  "nato-flagindex": {
+    "title": "NATO Flagindex",
+    "src": "../public/flags-svg/communities/nato-flagindex.svg",
+    "ratios": ["3:4"],
+    "colors": ["#012169", "#fff"],
+    "variantOf": "nato"
   }
 }

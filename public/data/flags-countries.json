@@ -33,7 +33,27 @@
     "continent": "eu",
     "sources": ["https://www.ompa.ad/normes-grafiques"],
     "note": "Created from the official guidelines.",
-    "official": "guidelines"
+    "official": "guidelines",
+    "variants": ["ad-simplified", "ad-lofi"]
+  },
+  "ad-simplified": {
+    "title": "Andorra Simplified",
+    "src": "../public/flags-svg/countries/ad-simplified.svg",
+    "countryCode": "ad",
+    "ratios": ["7:10"],
+    "colors": ["#D50032", "#FEDD00", "#10069F"],
+    "continent": "eu",
+    "variantOf": "ad"
+  },
+  "ad-lofi": {
+    "title": "Andorra Lo-Fi",
+    "src": "../public/flags-svg/countries/ad-lofi.svg",
+    "countryCode": "ad",
+    "ratios": ["7:10"],
+    "colors": ["#D50032", "#FEDD00", "#10069F"],
+    "continent": "eu",
+    "sources": ["https://www.ompa.ad/normes-grafiques"],
+    "variantOf": "ad"
   },
   "pt": {
     "title": "Portugal",
@@ -81,6 +101,32 @@
       "https://www.srbija.gov.rs/tekst/en/130128/national-symbols.php"
     ],
     "note": ""
+  },
+  "ro": {
+    "title": "Romania",
+    "src": "../public/flags-svg/countries/ro.svg",
+    "countryCode": "ro",
+    "ratios": ["2:3"],
+    "colors": ["#002b7f", "#fcd116", "#ce1126"],
+    "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
+    "continent": "eu",
+    "sources": ["https://legislatie.just.ro/Public/DetaliiDocument/4303"],
+    "note": "Created from the official guidelines."
+  },
+  "md": {
+    "title": "Moldova",
+    "src": "../public/flags-svg/countries/md.svg",
+    "countryCode": "md",
+    "ratios": [],
+    "colors": [],
+    "shapes": ["stripes", "vertical"],
+    "groups": ["French tricolour revolution"],
+    "continent": "eu",
+    "sources": [
+      "https://web.archive.org/web/20060220145439/http://presedinte.md/simb.php?lang=eng&page=702",
+      "https://web.archive.org/web/20231204162817/http://lex.justice.md/viewdoc.php?action=view&view=doc&id=336791&lang=1"
+    ]
   },
   "it": {
     "title": "Italy",
@@ -597,6 +643,29 @@
     "continent": "as",
     "sources": [],
     "note": ""
+  },
+  "id": {
+    "title": "Indonesia",
+    "src": "../public/flags-svg/countries/id.svg",
+    "countryCode": "id",
+    "ratios": ["2:3"],
+    "colors": ["#ff0000", "#ffffff"],
+    "shapes": ["stripes", "horizontal"],
+    "continent": "as",
+    "sources": ["https://peraturan.bpk.go.id/Details/38661/uu-no-24-tahun-2009"]
+  },
+  "sg": {
+    "title": "Singapore",
+    "src": "../public/flags-svg/countries/sg.svg",
+    "countryCode": "sg",
+    "ratios": ["2:3"],
+    "colors": ["#e62625", "#ffffff"],
+    "shapes": ["stripes", "horizontal"],
+    "continent": "as",
+    "sources": [
+      "https://sso.agc.gov.sg/Act/NSA2022?ProvIds=Sc1-#Sc1-",
+      "https://www.nhb.gov.sg/what-we-do/our-work/community-engagement/education/resources/national-symbols/national-flag"
+    ]
   },
   "ae": {
     "title": "United Arab Emirates"

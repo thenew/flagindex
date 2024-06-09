@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700">
+	<title>Flag of Andorra (lo-fi version)</title>
+  <g class="flagindex-field">
+		<path fill="#D50032" d="M680 .787h320v700H680v-700Z"/>
+		<path fill="#FEDD00" d="M320 .787h360v700H320v-700Z"/>
+		<path fill="#10069F" d="M0 .787h320v700H0v-700Z"/>
+  </g>
+  <g class="flagindex-emblem">
+		<path fill="#C6AA76" d="M375 225.787h250v250H375v-250Z"/>
+		<path fill="#FEDD00" d="M504 354.787h80v80h-80v-80Z"/>
+		<path fill="#E77912" d="M416 354.787h80v80h-80v-80Z"/>
+		<path fill="#E77912" d="M504 266.787h80v80h-80v-80Z"/>
+		<path fill="#D52B1E" d="M416 266.787h80v80h-80v-80Z"/>
+	</g>
+</svg>
