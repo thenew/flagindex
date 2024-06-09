@@ -13,6 +13,21 @@
       "https://www.regeringen.ax/sites/default/files/attachments/law/afs2004-nr15.pdf"
     ]
   },
+  "cy": {
+    "title": "Cyprus",
+    "src": "../public/flags-svg/countries/cy.svg",
+    "countryCode": "cy",
+    "ratios": ["2:3"],
+    "colors": ["#fff", "#e38c00", "#585f45"],
+    "shapes": ["map"],
+    "groups": [""],
+    "continent": "eu",
+    "sources": [
+      "https://www.presidency.gov.cy/cypresidency/cypresidency.nsf/presidencf_el/presidencf_el",
+      "https://archive.ph/20120529153152/http://www.cyprus.gov.cy/portal/portal.nsf/0/e4ddfb907c009ee4c2257023002c4fe4"
+    ],
+    "note": "Created from the jpg file on the presidency website."
+  },
   "eu": {
     "title": "Europe",
     "src": "../public/flags-svg/countries/eu.svg",
@@ -882,9 +897,6 @@
   },
   "cx": {
     "title": "Christmas Island"
-  },
-  "cy": {
-    "title": "Cyprus"
   },
   "dj": {
     "title": "Djibouti"
