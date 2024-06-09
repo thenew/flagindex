@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+	<title>Flag of Turkey</title>
+	<path fill="#E30A17" d="M0 0h300v200H0V0Z"/>
+	<g class="flagindex-emblem" fill="#fff">
+		<path d="m139.167 100 45.226-14.694-27.953 38.47V76.223l27.953 38.47-45.226-14.694Z"/>
+		<path d="M142.25 126.737a50 50 0 1 1 0-53.474 40 40 0 1 0 0 53.474Z"/>
+	</g>
+</svg>

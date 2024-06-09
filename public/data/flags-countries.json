@@ -61,6 +61,7 @@
     "countryCode": "ba",
     "ratios": ["1:2"],
     "colors": ["#002395", "#FECB00", "#fff"],
+    "shapes": ["triangle", "shield"],
     "continent": "eu",
     "sources": [
       "http://www.mpr.gov.ba/biblioteka/zakoni/bs/Zakon%20o%20zastavi%20BiH%20-%2019%20-%2001.pdf",
@@ -695,6 +696,17 @@
     "continent": "as",
     "sources": ["https://peraturan.bpk.go.id/Details/38661/uu-no-24-tahun-2009"]
   },
+  "hk": {
+    "title": "Hong Kong",
+    "src": "../public/flags-svg/countries/hk.svg",
+    "countryCode": "hk",
+    "ratios": ["2:3"],
+    "colors": ["#ED1B2E", "#fff"],
+    "shapes": ["flower", "star"],
+    "continent": "as",
+    "sources": ["https://www.protocol.gov.hk/en/flags-emblems-anthem.html"],
+    "note": "Adapted from the official PS file."
+  },
   "kr": {
     "title": "South Korea",
     "src": "../public/flags-svg/countries/kr.svg",
@@ -712,12 +724,25 @@
     "src": "../public/flags-svg/countries/sg.svg",
     "countryCode": "sg",
     "ratios": ["2:3"],
-    "colors": ["#e62625", "#ffffff"],
-    "shapes": ["stripes", "horizontal"],
+    "colors": ["#e62625", "#fff"],
+    "shapes": ["stripes", "horizontal", "star"],
     "continent": "as",
     "sources": [
       "https://sso.agc.gov.sg/Act/NSA2022?ProvIds=Sc1-#Sc1-",
       "https://www.nhb.gov.sg/what-we-do/our-work/community-engagement/education/resources/national-symbols/national-flag"
+    ]
+  },
+  "tr": {
+    "title": "Turkey",
+    "src": "../public/flags-svg/countries/tr.svg",
+    "countryCode": "tr",
+    "ratios": ["2:3"],
+    "colors": ["#E30A17", "#fff"],
+    "shapes": ["crescent", "star"],
+    "continent": "as",
+    "sources": [
+      "https://www.tccb.gov.tr/cumhurbaskanligi/resmi-simgeler/bayrak/",
+      "https://www5.tbmm.gov.tr/tutanaklar/KANUNLAR_KARARLAR/kanuntbmmc016/kanuntbmmc016/kanuntbmmc01602994.pdf"
     ]
   },
   "ae": {
