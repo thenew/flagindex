@@ -55,6 +55,47 @@
     "sources": ["https://www.ompa.ad/normes-grafiques"],
     "variantOf": "ad"
   },
+  "ba": {
+    "title": "Bosnia and Herzegovina",
+    "src": "../public/flags-svg/countries/ba.svg",
+    "countryCode": "ba",
+    "ratios": ["1:2"],
+    "colors": ["#002395", "#FECB00", "#fff"],
+    "continent": "eu",
+    "sources": [
+      "http://www.mpr.gov.ba/biblioteka/zakoni/bs/Zakon%20o%20zastavi%20BiH%20-%2019%20-%2001.pdf",
+      "https://www.parlament.ba/Content/Read/233?title=OBosniIHercegovini&lang=en"
+    ],
+    "note": "No official flag document, nor colors."
+  },
+  "bg": {
+    "title": "Bulgaria",
+    "src": "../public/flags-svg/countries/bg.svg",
+    "countryCode": "bg",
+    "ratios": ["3:5"],
+    "colors": ["#fff", "#090", "#c00"],
+    "continent": "eu",
+    "sources": [
+      "https://identity.egov.bg/wps/portal/identity/government-symbols/flag/flag",
+      "https://www.parliament.bg/en/21",
+      "https://lex.bg/laws/ldoc/2134401024"
+    ],
+    "variants": ["bg-dark"]
+  },
+  "bg-dark": {
+    "title": "Bulgaria dark alternative",
+    "src": "../public/flags-svg/countries/bg-dark.svg",
+    "countryCode": "bg",
+    "ratios": ["3:5"],
+    "colors": ["#fff", "#008000", "#c80000"],
+    "continent": "eu",
+    "sources": [
+      "https://identity.egov.bg/wps/portal/identity/government-symbols/flag/flag",
+      "https://www.parliament.bg/en/21",
+      "https://lex.bg/laws/ldoc/2134401024"
+    ],
+    "variantOf": "bg"
+  },
   "pt": {
     "title": "Portugal",
     "src": "../public/flags-svg/countries/pt.svg",
@@ -529,9 +570,9 @@
     "title": "Ethiopia",
     "src": "../public/flags-svg/countries/et.svg",
     "countryCode": "et",
+    "ratios": ["1:2"],
     "shapes": ["stripes", "horizontal"],
     "colors": ["#da121a", "#fcdd09", "#078930", "#0F47AF"],
-    "ratios": ["1:2"],
     "groups": ["Pan-African colours"],
     "continent": "af",
     "sources": [
@@ -545,9 +586,9 @@
     "title": "Ethiopia",
     "src": "../public/flags-svg/countries/et-flagindex.svg",
     "countryCode": "et",
+    "ratios": ["1:2"],
     "shapes": ["stripes", "horizontal"],
     "colors": ["#da121a", "#fcdd09", "#078930", "#0F47AF"],
-    "ratios": ["1:2"],
     "groups": ["Pan-African colours"],
     "continent": "af",
     "sources": [
@@ -561,9 +602,9 @@
     "title": "Canada",
     "src": "../public/flags-svg/countries/ca.svg",
     "countryCode": "ca",
+    "ratios": ["1:2"],
     "shapes": ["stripes", "vertical"],
     "colors": ["#b0313f", "#fff"],
-    "ratios": ["1:2"],
     "continent": "na",
     "sources": [
       "https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html",
@@ -577,9 +618,9 @@
     "title": "Canada Flagindex",
     "src": "../public/flags-svg/countries/ca-flagindex.svg",
     "countryCode": "ca",
+    "ratios": ["1:2"],
     "shapes": ["stripes", "vertical"],
     "colors": ["#f00", "#fff"],
-    "ratios": ["1:2"],
     "continent": "na",
     "sources": [
       "https://www.canada.ca/en/services/culture/canadian-identity-society/anthems-symbols/national-flag.html",
@@ -654,6 +695,18 @@
     "continent": "as",
     "sources": ["https://peraturan.bpk.go.id/Details/38661/uu-no-24-tahun-2009"]
   },
+  "kr": {
+    "title": "South Korea",
+    "src": "../public/flags-svg/countries/kr.svg",
+    "countryCode": "kr",
+    "ratios": ["2:3"],
+    "colors": ["#fff", "#cd2e3a", "#0047a0", "#000"],
+    "continent": "as",
+    "sources": [
+      "https://www.mois.go.kr/eng/sub/a03/nationalSymbol/screen.do",
+      "https://theme.archives.go.kr//next/symbolKorea/makeNationalFlag.do"
+    ]
+  },
   "sg": {
     "title": "Singapore",
     "src": "../public/flags-svg/countries/sg.svg",
@@ -706,9 +759,6 @@
   "az": {
     "title": "Azerbaijan"
   },
-  "ba": {
-    "title": "Bosnia and Herzegovina"
-  },
   "bb": {
     "title": "Barbados"
   },
@@ -717,9 +767,6 @@
   },
   "bf": {
     "title": "Burkina Faso"
-  },
-  "bg": {
-    "title": "Bulgaria"
   },
   "bh": {
     "title": "Bahrain"
