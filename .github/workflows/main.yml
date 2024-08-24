@@ -1,0 +1,51 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '10.14.1'
+
+      - name: Cache node_modules
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-node_modules-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node_modules-
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build project
+        run: yarn build
+
+      - name: Clean up node_modules
+        run: rm -rf node_modules/
+
+      - name: Install production dependencies
+        run: yarn install --prod
+
+      - name: Install sshpass
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq sshpass
+
+      - name: Deploy to production
+        env:
+          SSHPASS: ${{ secrets.GIT_PASS }}
+        run: |
+          sshpass -e scp -o stricthostkeychecking=no -r node_modules git@piouf.com:/var/www/sarapis
+          sshpass -e scp -o stricthostkeychecking=no -r public git@piouf.com:/var/www/sarapis
+          sshpass -e scp -o stricthostkeychecking=no -r views git@piouf.com:/var/www/sarapis
+          sshpass -e scp -o stricthostkeychecking=no -r dist git@piouf.com:/var/www/sarapis
