@@ -22,23 +22,35 @@ const flagsCountries = JSON.parse(
 Object.keys(flagsCountries).forEach((key) => {
   flagsCountries[key].category = "countries";
 });
+
 const flagsMaritime = JSON.parse(
   fs.readFileSync(`${dataPath}/flags-maritime.json`)
 );
 Object.keys(flagsMaritime).forEach((key) => {
   flagsMaritime[key].category = "maritime";
 });
+
+const flagsOrganisations = JSON.parse(
+  fs.readFileSync(`${dataPath}/flags-orgs.json`)
+);
+Object.keys(flagsOrganisations).forEach((key) => {
+  flagsOrganisations[key].category = "organisations";
+});
+
 const flagsCommunities = JSON.parse(
   fs.readFileSync(`${dataPath}/flags-communities.json`)
 );
 Object.keys(flagsCommunities).forEach((key) => {
   flagsCommunities[key].category = "communities";
 });
+
 const flagsUnordered = {
   ...flagsMaritime,
   ...flagsCommunities,
+  ...flagsOrganisations,
   ...flagsCountries,
 };
+
 const flags = {};
 Object.keys(flagsUnordered)
   .sort()
@@ -62,6 +74,18 @@ app.get("/", function (req, res) {
         query: req.url.substring(1), // remove slash
         items: flags,
         continents: continents,
+      })
+    )
+  );
+});
+
+app.get("/organisations", function (req, res) {
+  res.render(
+    "home",
+    rend(
+      Home({
+        query: `?categories=organisations`,
+        items: flags,
       })
     )
   );
@@ -159,6 +183,7 @@ Object.keys(flags).find((slug) => {
 app.use("/", express.static("public/flags-svg/countries"));
 app.use("/", express.static("public/flags-svg/maritime"));
 app.use("/", express.static("public/flags-svg/communities"));
+app.use("/", express.static("public/flags-svg/organisations"));
 app.use("/", express.static("public/flags-svg/others"));
 app.use("/manifest.webmanifest", express.static("public/manifest.webmanifest"));
 

@@ -165,6 +165,7 @@ export const collectionTitles = {
   countries: `Sovereign states flags`,
   maritime: `Maritime flags`,
   communities: `Communities flags`,
+  organisations: `Organisations flags`,
   1: `Monochrome`,
   2: `2 colors`,
   3: `3 colors`,

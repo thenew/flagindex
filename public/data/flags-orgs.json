@@ -1,0 +1,40 @@
+{
+  "olympics": {
+    "title": "Olympics",
+    "src": "../public/flags-svg/orgs/olympics.svg",
+    "ratios": ["2:3"],
+    "colors": [
+      "#0078d0",
+      "#ffb114",
+      "#000000",
+      "#00a651",
+      "#f0282d",
+      "#ffffff"
+    ],
+    "shapes": [""],
+    "sources": [
+      "https://stillmed.olympics.com/media/Documents/International-Olympic-Committee/Olympic-brand/Olympic-Brand-Guidelines.pdf",
+      "https://olympics.com/ioc/olympic-brand",
+      "https://olympics.com/ioc/olympic-rings"
+    ]
+  },
+  "nato": {
+    "title": "NATO",
+    "src": "../public/flags-svg/orgs/nato.svg",
+    "ratios": ["3:4"],
+    "colors": ["#004990", "#fff"],
+    "sources": [
+      "https://www.jwc.nato.int/application/files/8415/6570/9049/NATO-VIGs-2016-en.pdf",
+      "https://www.nato.int/cps/en/natohq/declassified_136211.htm"
+    ],
+    "note": "The approximate hex color for the Pantone 280 C, used in our variant, looks more convicing as dark blue than the official HTML color from the Visual Identity Guidelines in sources: #004990.",
+    "variants": ["nato-flagindex"]
+  },
+  "nato-flagindex": {
+    "title": "NATO Flagindex",
+    "src": "../public/flags-svg/orgs/nato-flagindex.svg",
+    "ratios": ["3:4"],
+    "colors": ["#012169", "#fff"],
+    "variantOf": "nato"
+  }
+}
