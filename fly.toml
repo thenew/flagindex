@@ -6,6 +6,9 @@
 app = 'flagindex'
 primary_region = 'ams'
 
+[env]
+  PORT = "8080"
+
 [build]
 
 [http_service]
