@@ -12,13 +12,13 @@
     "svgmin": "./scripts/svgo.sh"
   },
   "dependencies": {
+    "ejs": "^3.1.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^24.0.1",
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
-    "ejs": "^3.1.5",
     "nodemon": "^2.0.21",
     "rollup": "^3.18.0",
     "rollup-plugin-node-polyfills": "^0.2.1",
