@@ -11,7 +11,7 @@ import About from "./components/About.mjs";
 import Single from "./components/Single.mjs";
 
 const app = express();
-const port = 4200;
+const port = process.env.PORT || 4200;
 
 app.set("view engine", "ejs");
 
@@ -189,6 +189,7 @@ app.use("/manifest.webmanifest", express.static("public/manifest.webmanifest"));
 
 app.use("/public", express.static("public")); // assets
 
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+const host = process.env.PORT ? "0.0.0.0" : "localhost";
+app.listen(port, host, () => {
+  console.log(`Example app listening at http://${host}:${port}`);
 });
